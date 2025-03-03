@@ -1,0 +1,20 @@
+<style>
+    table {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        border: 1px solid black; 
+        padding: 8px; 
+    }
+</style>
+
+<table>
+    <caption>Student Body Composition</caption>
+    <tr>
+        <th scope="col">Race and ethnicity</th>
+        <th scope="col">Percentage</th>
+    </tr>
+    <!-- table rows here -->
+</table>
