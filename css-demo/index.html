@@ -5,16 +5,196 @@
   <meta charset="UTF-8">
   <meta name="description" content="Keyword rich narrative on site purpose">
   <meta name="author" content="Thomas Wallace">
-  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Internal CSS -->
+  <style>
+    html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: "Times New Roman", serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+}
+
+main {
+  width: 80vw;
+  max-width: 960px;
+}
+
+header.primary {
+  background-color: #f7bee5;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='42' height='58' viewBox='0 0 42 58'%3E%3Cg fill='%23eb7feb' fill-opacity='0.4'%3E%3Cpath fill-rule='evenodd' d='M12 18h12v18h6v4H18V22h-6v-4zm-6-2v-4H0V0h36v6h6v36h-6v4h6v12H6v-6H0V16h6zM34 2H2v8h24v24h8V2zM6 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm8 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm8 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm8 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM2 50h32v-8H10V18H2v32zm28-6a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0-8a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0-8a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0-8a2 2 0 1 0 0 4 2 2 0 0 0 0-4z'/%3E%3C/g%3E%3C/svg%3E");
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 1px 1px #000;
+  padding: 40px;
+}
+
+header.primary h1 {
+  font-size: 2.9rem;
+  margin: 20px 0 0;
+}
+
+header.primary h1 a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+h2, h3 {
+  color: #9b59b6;
+  text-align: center;
+}
+
+nav.primary {
+  background-color: #f7e6f7;
+  padding: 10px 0;
+}
+
+nav.primary ul {
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+nav.primary ul li {
+  list-style-type: none;
+}
+
+nav.primary ul li a {
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  border: 1px solid #C379E3;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  transition: 0.4s;
+}
+
+nav.primary ul li a:hover {
+  color: white;
+  border: 1px solid #ff68b3;
+  box-shadow: none;
+}
+
+#blog {
+  column-count: 3;
+  column-gap: 20px;
+  padding: 20px;
+  background-color: #f7e6f7;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+  border-top: 2px solid #f8a5c2;
+  border-bottom: 2px solid #f8a5c2;
+  padding-top: 40px;
+}
+
+#blog article.post {
+  background-color: #f0c9f8;
+  padding: 10px;
+  font-size: .8rem;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  break-inside: avoid;
+}
+
+#blog article.post:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+#blog article.post h2 {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+#blog article.post p {
+  color: #ff68b3;
+}
+
+#blog article.post a {
+  color: #ff68b3;
+  text-decoration: none;
+}
+
+#blog article.post a:hover {
+  color: #ff5286;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  #blog {
+    column-count: 1;
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  header.primary {
+    padding: 20px;
+  }
+
+  nav.primary ul {
+    flex-direction: column;
+  }
+}
+
+aside[role="complementary"] {
+  background-color: #ffffff;
+  color: #ff68b3;
+  padding: 40px;
+  text-align: center;
+}
+
+aside[role="complementary"] h2 {
+  color: #f8a5c2;
+}
+
+aside .container {
+  display: block;
+  gap: 20px;
+}
+
+aside .container a {
+  color: #000000;
+  font-size: 1.0rem;
+  text-decoration: none;
+}
+
+aside .container a:hover {
+  color: #f8a5c2;
+}
+
+aside article footer {
+  display: none;
+}
+
+  </style>
+
 </head>
 <body>
   <main>
-    <header role="banner" class="primary">
+    <header class="primary">
       <div class="hgroup">
         <h1><a href="index.html">Building the Modern Web</a></h1>
         <h2>HTML5, CSS, JavaScript Fundamentals</h2>
       </div>
-      <nav role="navigation">
+      <nav class="primary">
         <ul>
           <li><a href="https://ualr.edu/">UA Little Rock</a></li>
           <li><a href="http://learn.shayhowe.com/html-css/getting-to-know-html/">HTML5 & CSS Lessons</a></li>
@@ -22,18 +202,14 @@
         </ul>
       </nav>
     </header>
+
     <section id="content" class="container">
-      <h2>Introduction to Web Design</h2>
-      <p>Integer pretium fringilla mauris, sed cursus purus consectetur eu. Donec vitae placerat enim. Nam dictum purus nec diam pharetra, in accumsan ipsum commodo. In varius ligula posuere, sodales erat nec, tempus purus. Quisque eu posuere arcu, ut pellentesque
-        dui. Nam pretium, leo et sollicitudin mollis, sapien mi ultricies tortor, in placerat lectus odio a nisl. Suspendisse feugiat magna id mollis auctor. Nullam neque sem, hendrerit vitae metus at, vestibulum aliquet metus. Quisque dapibus ultrices
-        pulvinar. Aliquam condimentum sapien lorem, in egestas ipsum rhoncus sed. Vivamus congue et eros in cursus. Donec elementum quam sit amet feugiat volutpat. Vestibulum varius laoreet turpis id efficitur. Proin scelerisque volutpat lectus, at fermentum
-        dui euismod sed. In efficitur felis risus, at tempor risus aliquam vel.</p>
-      <h3>An Additional Content Heading</h3>
-      <p>Integer pretium fringilla mauris, sed cursus purus consectetur eu. Donec vitae placerat enim. Nam dictum purus nec diam pharetra, in accumsan ipsum commodo. In varius ligula posuere, sodales erat nec, tempus purus. Quisque eu posuere arcu, ut pellentesque
-        dui. Nam pretium, leo et sollicitudin mollis, sapien mi ultricies tortor, in placerat lectus odio a nisl. Suspendisse feugiat magna id mollis auctor. Nullam neque sem, hendrerit vitae metus at, vestibulum aliquet metus. Quisque dapibus ultrices
-        pulvinar. Aliquam condimentum sapien lorem, in egestas ipsum rhoncus sed. Vivamus congue et eros in cursus. Donec elementum quam sit amet feugiat volutpat. Vestibulum varius laoreet turpis id efficitur. Proin scelerisque volutpat lectus, at fermentum
-        dui euismod sed. In efficitur felis risus, at tempor risus aliquam vel.</p>
+      <h2><u>Introduction to Web Design</u></h2>
+      <p>Integer pretium fringilla mauris, sed cursus purus consectetur eu. Donec vitae placerat enim. Nam dictum purus nec diam pharetra, in accumsan ipsum commodo. In varius ligula posuere, sodales erat nec, tempus purus. Quisque eu posuere arcu, ut pellentesque dui. Nam pretium, leo et sollicitudin mollis, sapien mi ultricies tortor, in placerat lectus odio a nisl. Suspendisse feugiat magna id mollis auctor. Nullam neque sem, hendrerit vitae metus at, vestibulum aliquet metus. Quisque dapibus ultrices pulvinar. Aliquam condimentum sapien lorem, in egestas ipsum rhoncus sed. Vivamus congue et eros in cursus. Donec elementum quam sit amet feugiat volutpat. Vestibulum varius laoreet turpis id efficitur. Proin scelerisque volutpat lectus, at fermentum dui euismod sed. In efficitur felis risus, at tempor risus aliquam vel.</p>
+      <h3><u>An Additional Content Heading</u></h3>
+      <p>Integer pretium fringilla mauris, sed cursus purus consectetur eu. Donec vitae placerat enim. Nam dictum purus nec diam pharetra, in accumsan ipsum commodo. In varius ligula posuere, sodales erat nec, tempus purus. Quisque eu posuere arcu, ut pellentesque dui. Nam pretium, leo et sollicitudin mollis, sapien mi ultricies tortor, in placerat lectus odio a nisl. Suspendisse feugiat magna id mollis auctor. Nullam neque sem, hendrerit vitae metus at, vestibulum aliquet metus. Quisque dapibus ultrices pulvinar. Aliquam condimentum sapien lorem, in egestas ipsum rhoncus sed. Vivamus congue et eros in cursus. Donec elementum quam sit amet feugiat volutpat. Vestibulum varius laoreet turpis id efficitur. Proin scelerisque volutpat lectus, at fermentum dui euismod sed. In efficitur felis risus, at tempor risus aliquam vel.</p>
     </section>
+
     <section id="blog" class="container">
       <h2>Recent Posts</h2>
       <article class="post">
@@ -42,12 +218,11 @@
           <figcaption>Image Caption</figcaption>
         </figure>
         <header>
-         <time class="post-date" datetime="2025-2-24">February 24, 2025</time>
+          <time class="post-date" datetime="2025-02-24">February 24, 2025</time>
           <h2> <a href="#" rel="bookmark" title="link to this post">Article Title</a> </h2>
         </header>
         <div class="post-content">
-          <p>Curabitur facilisis pharetra ultrices. Phasellus eu elementum felis. Etiam cursus mi vitae odio imperdiet, vel fringilla orci porttitor. Cras at tincidunt metus, in lobortis ligula. Fusce metus nisl, efficitur id fringilla quis, luctus non nisi.
-          </p>
+          <p>Curabitur facilisis pharetra ultrices. Phasellus eu elementum felis. Etiam cursus mi vitae odio imperdiet, vel fringilla orci porttitor. Cras at tincidunt metus, in lobortis ligula. Fusce metus nisl, efficitur id fringilla quis, luctus non nisi.</p>
         </div>
         <footer class="post-meta"> Posted by <a href="#">Post Author</a></footer>
       </article>
@@ -57,12 +232,11 @@
           <figcaption>Image Caption</figcaption>
         </figure>
         <header>
-          <time class="post-date" datetime="2025-2-24">February 24, 2025</time>
+          <time class="post-date" datetime="2025-02-24">February 24, 2025</time>
           <h2> <a href="#" rel="bookmark" title="link to this post">Article Title</a> </h2>
         </header>
         <div class="post-content">
-          <p>Curabitur facilisis pharetra ultrices. Phasellus eu elementum felis. Etiam cursus mi vitae odio imperdiet, vel fringilla orci porttitor. Cras at tincidunt metus, in lobortis ligula. Fusce metus nisl, efficitur id fringilla quis, luctus non nisi.
-          </p>
+          <p>Curabitur facilisis pharetra ultrices. Phasellus eu elementum felis. Etiam cursus mi vitae odio imperdiet, vel fringilla orci porttitor. Cras at tincidunt metus, in lobortis ligula. Fusce metus nisl, efficitur id fringilla quis, luctus non nisi.</p>
         </div>
         <footer class="post-meta"> Posted by <a href="#">Post Author</a></footer>
       </article>
@@ -72,40 +246,39 @@
           <figcaption>Image Caption</figcaption>
         </figure>
         <header>
-          <time class="post-date" datetime="2025-2-24">February 24, 2025</time>
+          <time class="post-date" datetime="2025-02-24">February 24, 2025</time>
           <h2> <a href="#" rel="bookmark" title="link to this post">Article Title</a> </h2>
         </header>
         <div class="post-content">
-          <p>Curabitur facilisis pharetra ultrices. Phasellus eu elementum felis. Etiam cursus mi vitae odio imperdiet, vel fringilla orci porttitor. Cras at tincidunt metus, in lobortis ligula. Fusce metus nisl, efficitur id fringilla quis, luctus non nisi.
-          </p>
+          <p>Curabitur facilisis pharetra ultrices. Phasellus eu elementum felis. Etiam cursus mi vitae odio imperdiet, vel fringilla orci porttitor. Cras at tincidunt metus, in lobortis ligula. Fusce metus nisl, efficitur id fringilla quis, luctus non nisi.</p>
         </div>
         <footer class="post-meta"> Posted by <a href="#">Post Author</a></footer>
       </article>
     </section>
-    <aside role="complementary">
+
+    <aside>
       <div class="container">
         <article class="widget">
           <header>
             <h2>Sample Sidebar Item </h2>
           </header>
-          <p>Quisque justo erat, varius placerat fermentum vel, iaculis vel ligula. Phasellus et elit purus. Curabitur ipsum enim, scelerisque vitae condimentum ac, cursus eget quam. Nullam volutpat dui ut risus pulvinar at fringilla sem tristique. Nulla facilisi.
-            Donec posuere euismod purus, eu scelerisque risus pellentesque eu. Vestibulum sed tincidunt metus. <a href="#">Read More &raquo;</a></p>
+          <p>Quisque justo erat, varius placerat fermentum vel, iaculis vel ligula. Phasellus et elit purus. Curabitur ipsum enim, scelerisque vitae condimentum ac, cursus eget quam. Nullam volutpat dui ut risus pulvinar at fringilla sem tristique. Nulla facilisi. Donec posuere euismod purus, eu scelerisque risus pellentesque eu. Vestibulum sed tincidunt metus. <a href="#">Read More &raquo;</a></p>
           <footer>Widget Footer</footer>
         </article>
         <article class="widget">
           <header>
             <h2>Sample Sidebar Item </h2>
           </header>
-          <p>Quisque justo erat, varius placerat fermentum vel, iaculis vel ligula. Phasellus et elit purus. Curabitur ipsum enim, scelerisque vitae condimentum ac, cursus eget quam. Nullam volutpat dui ut risus pulvinar at fringilla sem tristique. Nulla facilisi.
-            Donec posuere euismod purus, eu scelerisque risus pellentesque eu. Vestibulum sed tincidunt metus. <a href="#">Read More &raquo;</a></p>
+          <p>Quisque justo erat, varius placerat fermentum vel, iaculis vel ligula. Phasellus et elit purus. Curabitur ipsum enim, scelerisque vitae condimentum ac, cursus eget quam. Nullam volutpat dui ut risus pulvinar at fringilla sem tristique. Nulla facilisi. Donec posuere euismod purus, eu scelerisque risus pellentesque eu. Vestibulum sed tincidunt metus. <a href="#">Read More &raquo;</a></p>
           <footer>Widget Footer</footer>
         </article>
       </div>
     </aside>
-    <footer id="colophon" role="contentinfo">
+
+    <footer id="colophon">
       <h6>&copy; 2025 Your Name</h6>
     </footer>
   </main>
 </body>
-
 </html>
+
